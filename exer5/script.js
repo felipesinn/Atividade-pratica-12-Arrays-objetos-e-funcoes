@@ -31,14 +31,15 @@ const data = [
     },
     {
         nome: 'Joice Castro da Silva',
-
+  
         sexo: 'F',
         salario: 3350.25,
     },
-];
+  ];
+  
+  const sexoMasculino = data.filter(pessoa => pessoa.sexo === 'M')
+  const totalSalarioMasculino = sexoMasculino.reduce((total, pessoa) => total + pessoa.salario, 0)
+  console.log(`A soma de salários masculinos é ${totalSalarioMasculino.toFixed(2)}.`)
 
-
-const somaSalarios = data.reduce((total, pessoa) => total + pessoa.salario, 0);
-console.log("A soma dos salários de todas as pessoas é: " + somaSalarios.toFixed(2));
-
-// 3. Imprima no console a soma do salário de todas as pessoas.
+//   5. Imprima no console a soma do salário de todos as pessoas do sexo
+// Masculino
